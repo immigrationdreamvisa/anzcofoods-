@@ -9,16 +9,18 @@ export function Home({ setCurrentPage }: HomeProps) {
   return (
     <div className="bg-brand-bg min-h-screen">
       {/* Hero Section */}
-      <section className="relative min-h-[80vh] flex items-center pt-20 overflow-hidden">
-        <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none bg-brand-charcoal">
-          <iframe
-            src="https://player.vimeo.com/video/652204701?muted=1&autoplay=1&loop=1&background=1&app_id=122963"
-            allow="autoplay; fullscreen; picture-in-picture"
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] opacity-80"
-            title="ANZCO Foods Background Video"
+      <section className="relative min-h-[85vh] flex items-center pt-20 overflow-hidden bg-brand-charcoal">
+        <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+          {/* Hero background image */}
+          <img 
+            src="/hero-bg.jpg"
+            alt="ANZCO Foods New Zealand Cattle and Pasture"
+            className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-brand-charcoal/40"></div>
+          {/* Gradient overlay for readability */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/35 to-black/20"></div>
         </div>
+
         <div className="relative z-10 max-w-7xl mx-auto px-12 w-full">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
